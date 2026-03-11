@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.dashboard-nav{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:20px;
+background:rgba(0,0,0,0.6);
+position:relative;
+}
+
+.dashboard-nav a{
+text-decoration:none;
+color:white;
+text-align:center;
+font-size:14px;
+}
+
+.dashboard-nav img{
+width:50px;
+display:block;
+margin:auto;
+}
+
+/* Profile dropdown */
+
+.profile-menu{
+position:relative;
+}
+
+.dropdown{
+display:none;
+position:absolute;
+top:70px;
+background:white;
+color:black;
+padding:10px;
+border-radius:5px;
+}
+
+.dropdown a{
+display:block;
+text-decoration:none;
+color:black;
+padding:5px;
+}
+
+.profile-menu:hover .dropdown{
+display:block;
+}
+
+/* Dashboard content */
+
+.dashboard-content{
+text-align:center;
+margin-top:80px;
+}
+
+.career-box{
+background:white;
+color:black;
+width:300px;
+margin:40px auto;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Top Menu -->
+
+<div class="dashboard-nav">
+
+<!-- Profile with Logout -->
+
+<div class="profile-menu">
+<a href="#">
+<img src="https://cdn-icons-png.flaticon.com/512/847/847969.png">
+<p>Profile</p>
+</a>
+
+<div class="dropdown">
+<a href="profile.html">View Profile</a>
+<a href="index.html">Logout</a>
+</div>
+</div>
+
+
+<a href="skills.html">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+<p>Skill Analysis</p>
+</a>
+
+<a href="roadmap.html">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png">
+<p>Career Roadmap</p>
+</a>
+
+</div>
+
+
+<!-- Dashboard Content -->
+
+<div class="dashboard-content">
+
+<h1>Welcome to Smart Career Dashboard</h1>
+
+<p>Select a section above to explore your career insights.</p>
+
+<!-- Recommended Career -->
+
+<div class="career-box">
+
+<h2>Recommended Career</h2>
+
+<p>AI Engineer</p>
+
+</div>
+
+</div>
+
+</body>
+</html>

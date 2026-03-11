@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Career Questions</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.question-box{
+background:white;
+color:black;
+padding:40px;
+width:400px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+button{
+margin-top:20px;
+padding:10px 20px;
+background:#2c5364;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="question-box">
+
+<h2 id="questionText">Question will appear here</h2>
+
+<div id="options"></div>
+
+<button onclick="nextQuestion()">Next</button>
+
+</div>
+
+<script src="questions.js"></script>
+
+</body>
+</html>
