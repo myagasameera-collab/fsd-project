@@ -82,12 +82,12 @@ font-size:18px;
 /* Login Box */
 
 .login-box{
-background:rgb(47, 179, 188);
+background:rgba(255, 255, 255,0.9);
 color:black;
 padding:30px;
-border-radius:10px;
-width:300px;
-box-shadow:0 0 20px rgba(0,0,0,0.4);
+border-radius:12px;
+width:400px;
+box-shadow:0 10 25px rgba(0,0,0,0.4);
 }
 
 .login-box h3{
@@ -167,4 +167,5 @@ footer{
 text-align:center;
 padding:20px;
 background:rgba(0,0,0,0.4);
+
 }
