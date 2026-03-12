@@ -24,6 +24,29 @@ text-align:center;
 border-radius:10px;
 box-shadow:0 0 20px rgba(0,0,0,0.3);
 }
+.option-box{
+display:flex;
+background:#a4d9e2;
+padding:10px;
+margin:10px;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+font-size:16px;
+}
+
+.option-box:hover{
+background:#4d6db3;
+}
+
+.option-box input{
+margin-right:10px;
+}
+
+.option-box input:checked + span{
+color:#2c5364;
+font-weight:bold;
+}
 
 button{
 margin-top:20px;
@@ -67,5 +90,6 @@ cursor:pointer;
 </body>
 
 </html>
+
 
 
