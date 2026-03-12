@@ -55,7 +55,7 @@ let optionsHTML = "";
 q.options.forEach(function(option){
 
 optionsHTML += `
-<label>
+<label class="option-box">
 <input type="radio" name="answer" value="${option}">
 ${option}
 </label><br>
@@ -96,5 +96,6 @@ window.location.href = "dashboard.html";
 }
 
 }
+
 
 loadQuestion();
