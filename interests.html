@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Your Interest</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+    padding:20px;
+}
+
+h2{
+    margin-top:30px;
+}
+
+.container{
+    max-width:800px;
+    margin:auto;
+}
+
+.interest-btn{
+    border:1px solid #555;
+    background:#1e293b;
+    color:white;
+    padding:10px 15px;
+    margin:6px;
+    border-radius:8px;
+    cursor:pointer;
+    display:inline-block;
+}
+
+.interest-btn:hover{
+    background:#3b82f6;
+}
+
+.selected{
+    background:#22c55e;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Select Your Career Interests</h1>
+
+<h2>Data Science & Analytics</h2>
+<button class="interest-btn">Data Manager</button>
+<button class="interest-btn">Data Analyst</button>
+<button class="interest-btn">Data Scientist</button>
+<button class="interest-btn">Data Engineer</button>
+
+<h2>Software Engineering & IT</h2>
+<button class="interest-btn">Python Developer</button>
+<button class="interest-btn">Junior Software Developer</button>
+<button class="interest-btn">Cybersecurity Professional</button>
+<button class="interest-btn">UX Designer</button>
+<button class="interest-btn">IT Support Specialist</button>
+<button class="interest-btn">Product Manager</button>
+<button class="interest-btn">Full Stack Developer</button>
+<button class="interest-btn">Front-End Developer</button>
+<button class="interest-btn">Application Developer</button>
+<button class="interest-btn">Back-End Developer</button>
+<button class="interest-btn">DevOps Engineer</button>
+<button class="interest-btn">iOS Developer</button>
+<button class="interest-btn">IT Project Manager</button>
+<button class="interest-btn">Android Developer</button>
+
+<h2>Sales & Marketing</h2>
+<button class="interest-btn">Graphic Designer</button>
+<button class="interest-btn">Content Creator</button>
+<button class="interest-btn">Digital Marketer</button>
+<button class="interest-btn">Social Media Marketer</button>
+<button class="interest-btn">Sales Operations Specialist</button>
+<button class="interest-btn">Marketing Analyst</button>
+
+</div>
+
+<script>
+const buttons = document.querySelectorAll(".interest-btn");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        btn.classList.toggle("selected");
+    });
+});
+</script>
+
+</body>
+</html>

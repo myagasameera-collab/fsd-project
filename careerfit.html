@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Career Fit</title>
+
+<style>
+
+body{
+font-family: Arial;
+background: linear-gradient(135deg,#4facfe,#00f2fe);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.container{
+background:white;
+padding:30px;
+border-radius:10px;
+width:420px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+h1{
+text-align:center;
+}
+
+button{
+margin-top:20px;
+background:#4facfe;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+width:100%;
+font-size:16px;
+}
+
+button:hover{
+background:#2b8df2;
+}
+
+#result{
+margin-top:20px;
+padding:15px;
+background:#f1f1f1;
+border-radius:8px;
+text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Find Your Career Path</h1>
+
+<form id="careerForm">
+
+<p><b>1. What interests you the most?</b></p>
+
+<label><input type="radio" name="interest" value="web"> Web Development</label><br>
+<label><input type="radio" name="interest" value="ai"> Artificial Intelligence</label><br>
+<label><input type="radio" name="interest" value="security"> Cyber Security</label><br>
+<label><input type="radio" name="interest" value="data"> Data Analysis</label><br>
+
+
+<p><b>2. Which programming language do you like?</b></p>
+
+<label><input type="radio" name="language" value="javascript"> JavaScript</label><br>
+<label><input type="radio" name="language" value="python"> Python</label><br>
+<label><input type="radio" name="language" value="java"> Java</label><br>
+
+
+<p><b>3. What type of work do you enjoy?</b></p>
+
+<label><input type="radio" name="work" value="design"> Designing Websites</label><br>
+<label><input type="radio" name="work" value="analysis"> Analyzing Data</label><br>
+<label><input type="radio" name="work" value="security"> Protecting Systems</label><br>
+<label><input type="radio" name="work" value="automation"> Building Smart Systems</label><br>
+
+
+<p><b>4. What is your programming level?</b></p>
+
+<label><input type="radio" name="level" value="beginner"> Beginner</label><br>
+<label><input type="radio" name="level" value="intermediate"> Intermediate</label><br>
+<label><input type="radio" name="level" value="advanced"> Advanced</label><br>
+
+
+<p><b>5. What kind of career do you want?</b></p>
+
+<label><input type="radio" name="goal" value="highpay"> High Paying Tech Job</label><br>
+<label><input type="radio" name="goal" value="creative"> Creative Development</label><br>
+<label><input type="radio" name="goal" value="research"> AI / Research</label><br>
+<label><input type="radio" name="goal" value="security"> Security Expert</label><br>
+
+
+<button type="button" onclick="findCareer()">Find My Career</button>
+
+</form>
+
+<div id="result"></div>
+
+</div>
+
+
+<script>
+
+function findCareer(){
+
+let interest = document.querySelector('input[name="interest"]:checked');
+let language = document.querySelector('input[name="language"]:checked');
+let work = document.querySelector('input[name="work"]:checked');
+let level = document.querySelector('input[name="level"]:checked');
+let goal = document.querySelector('input[name="goal"]:checked');
+
+if(!interest || !language || !work || !level || !goal){
+alert("Please answer all questions");
+return;
+}
+
+interest = interest.value;
+language = language.value;
+work = work.value;
+goal = goal.value;
+
+let career = "";
+
+if(interest === "web" && language === "javascript"){
+career = "Full Stack Web Developer";
+}
+
+else if(interest === "ai" && language === "python"){
+career = "AI Engineer";
+}
+
+else if(interest === "security"){
+career = "Cyber Security Analyst";
+}
+
+else if(interest === "data" && language === "python"){
+career = "Data Scientist";
+}
+
+else if(work === "design"){
+career = "Frontend Developer";
+}
+
+else if(work === "analysis"){
+career = "Data Analyst";
+}
+
+else{
+career = "Software Developer";
+}
+
+document.getElementById("result").innerHTML =
+"<h2>Your Best Career: "+career+"</h2>";
+
+localStorage.setItem("career", career);
+
+}
+
+</script>
+
+</body>
+</html>
